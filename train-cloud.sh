@@ -18,6 +18,7 @@ gcloud ai-platform jobs submit training $JOB_NAME \
     --module-name cifar10_estimator.cifar10_main \
     -- \
     --data-dir=$MY_BUCKET/cifar-10-data \
-    --num-gpus=4 \
+    --num-gpus=0 \
     --train-steps=10000
 
+(sleep 1h; gcloud ai-platform jobs cancel $JOB_NAME ) &
