@@ -2,7 +2,7 @@
 
 Codebase adapted from that of https://github.com/tensorflow/models/tree/master/tutorials/image/cifar10_estimator
 
-LICENSE
+# LICENSE
 
 Copyright 2017 The TensorFlow Authors. All Rights Reserved. 
 Minor modifications 2019. wyjw.
