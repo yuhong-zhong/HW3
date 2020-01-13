@@ -4,7 +4,7 @@ Codebase adapted from that of https://github.com/tensorflow/models/tree/master/t
 
 LICENSE
 
-Copyright 2017 The TensorFlow Authors. All Rights Reserved. \\
+Copyright 2017 The TensorFlow Authors. All Rights Reserved. 
 Minor modifications 2019. wyjw.
 
 Licensed under the Apache License, Version 2.0 (the "License");
