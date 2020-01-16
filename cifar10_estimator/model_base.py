@@ -217,3 +217,11 @@ class ResNet(object):
         x = tf.reduce_mean(x, [1, 2])
     tf.logging.info('image after unit %s: %s', name_scope, x.get_shape())
     return x
+
+  def _fully_connected_with_activation(self, x, out_dim):
+    with tf.name_scope('fully_connected_activation') as name_scope:
+    '''
+    FILL IN HERE
+    '''
+    tf.logging.info('image after unit %s: %s', name_scope, x.get_shape())
+    return x
