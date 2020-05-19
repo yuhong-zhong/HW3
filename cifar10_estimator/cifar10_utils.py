@@ -1,6 +1,5 @@
 import collections
 import six
-import portalocker
 import os
 
 import tensorflow as tf
@@ -110,10 +109,7 @@ class ExamplesPerSecondHook(session_run_hook.SessionRunHook):
         logging.info('%s: %g (%g), step = %g', 'Average examples/sec',
                      average_examples_per_sec, current_examples_per_sec,
                      self._total_steps)
-        with portalocker.Lock('/tmp/tf', 'w') as fh:
-            fh.write("{}\n".format(current_examples_per_sec))
-            fh.flush()
-            os.fsync(fh.fileno())
+        os.system("./atomic_write {} /tmp/tf".format(current_examples_per_sec))
 
 def local_device_setter(num_devices=1,
                         ps_device_type='cpu',
