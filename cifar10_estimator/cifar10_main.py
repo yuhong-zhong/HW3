@@ -157,7 +157,7 @@ def get_model_fn(num_gpus, variable_strategy, num_workers):
       loss = tf.reduce_mean(tower_losses, name='loss')
 
       examples_sec_hook = cifar10_utils.ExamplesPerSecondHook(
-          params.train_batch_size, every_n_steps=1)
+          params.train_batch_size, every_n_steps=None, every_n_secs=1)
 
       tensors_to_log = {'learning_rate': learning_rate, 'loss': loss}
 
